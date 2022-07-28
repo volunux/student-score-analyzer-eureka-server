@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-service
+  profiles:    active:    - default
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:      enabled: true
+
+ribbon:
+  eureka:
+    enabled: false
